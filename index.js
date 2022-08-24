@@ -4,6 +4,7 @@ const express = require("express");
 const app = express();
 //importer lib http
 const http = require("http");
+const port = process.env.PORT || 3001;
 
 //Importer class Server de la lib
 const { Server } = require("socket.io");
@@ -30,6 +31,6 @@ io.on("connection", (socket) => {
   });
 });
 
-server.listen(3001, () => {
+server.listen(port, () => {
   console.log("Server is running");
 });
