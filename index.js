@@ -14,6 +14,8 @@ app.use(cors());
 //creer le server
 const server = http.createServer(app);
 
+console.log("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+
 //creer var qui va manger tout ce qui concerner le socket io
 const io = new Server(server, {
   cors: {
@@ -21,6 +23,8 @@ const io = new Server(server, {
     methods: ["GET", "POST"],
   },
 });
+
+console.log("YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY");
 
 //Listening to events
 io.on("connection", (socket) => {
