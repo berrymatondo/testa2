@@ -19,7 +19,8 @@ console.log("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
 //creer var qui va manger tout ce qui concerner le socket io
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:3000",
+    //origin: "http://localhost:3000","https://berrymatondo.github.io/testa1/",
+    origin: "https://berrymatondo.github.io/testa1/",
     methods: ["GET", "POST"],
   },
 });
