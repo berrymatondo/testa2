@@ -4,7 +4,8 @@ const express = require("express");
 const app = express();
 //importer lib http
 const http = require("http");
-const port = process.env.PORT || 3001;
+//const port = process.env.PORT || 3001;
+const port = 3041;
 
 //Importer class Server de la lib
 const { Server } = require("socket.io");
@@ -20,7 +21,7 @@ console.log("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
 const io = new Server(server, {
   cors: {
     //origin: "http://localhost:3000","https://berrymatondo.github.io/testa1",
-    origin: "https://berrymatondo.github.io/testa1",
+    origin: "http://51.91.97.19:8082",
     methods: ["GET", "POST"],
   },
 });
